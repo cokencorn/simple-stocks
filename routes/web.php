@@ -12,8 +12,6 @@ require __DIR__.'/auth.php';
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/stocks', [App\Http\Controllers\StockController::class, 'stocksView'])->name('stock.list');
 Route::get('/stock', [App\Http\Controllers\StockController::class, 'createStockView'])->name('stock');
 Route::post('/stock', [App\Http\Controllers\StockController::class, 'createStockAction'])->name('stock.create');
@@ -24,7 +22,6 @@ Route::get('/stock/transactions', [App\Http\Controllers\StockController::class, 
 Route::get('/stock/transaction', [App\Http\Controllers\StockController::class, 'createStockTransactionView'])->name('stock.transaction');
 Route::post('/stock/transaction', [App\Http\Controllers\StockController::class, 'createStockTransactionAction'])->name('stock.transaction.create');
 Route::get('/stock/transaction/{stockTransaction}/delete', [App\Http\Controllers\StockController::class, 'deleteStockTransactionAction'])->name('stock.transaction.delete');
-
 
 Route::get('/stock/report', [App\Http\Controllers\StockController::class, 'stockReportByDateView'])->name('stock.report');
 
