@@ -38,15 +38,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('stock.list') }}">Malzemeler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('stock.transaction.list') }}">Stok Hareketleri</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('stock.report') }}">Tarih Bazlı Stok Raporu</a>
-                    </li>
+                    @guest
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('stock.list') }}">Malzemeler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('stock.transaction.list') }}">Stok Hareketleri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('stock.report') }}">Tarih Bazlı Stok Raporu</a>
+                        </li>
+                    @endguest
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
