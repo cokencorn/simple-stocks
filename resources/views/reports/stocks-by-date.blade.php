@@ -18,7 +18,7 @@
                                     <label>Bitiş Tarihi</label>
                                     {{ Form::date('end_date', date('Y-m-d'), ['class' => 'form-control', 'required']) }}
                                 </div>
-                                <div class="form-group col-2">
+                                <div class="form-group col-md-2">
                                     <label class="text-white">.</label>
                                     <button type="submit" class="btn btn-block btn-primary">Oluştur</button>
                                 </div>
