@@ -10,11 +10,11 @@
                         <form method="GET" action="{{ route('stock.report') }}">
                             @csrf
                             <div class="row">
-                                <div class="form-group col-5">
+                                <div class="form-group col-md-5 col-6">
                                     <label>Başlangıç Tarihi</label>
                                     {{ Form::date('start_date', date('Y-m-d'), ['class' => 'form-control', 'required']) }}
                                 </div>
-                                <div class="form-group col-5">
+                                <div class="form-group col-md-5 col-6">
                                     <label>Bitiş Tarihi</label>
                                     {{ Form::date('end_date', date('Y-m-d'), ['class' => 'form-control', 'required']) }}
                                 </div>
@@ -28,7 +28,7 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <td>KOD</td>
+                                <td>Kod</td>
                                 <td>Barkod</td>
                                 <td>Açıklama</td>
                                 <td>Stok Miktarı</td>

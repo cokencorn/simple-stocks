@@ -10,7 +10,7 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <td>KOD</td>
+                                <td>Kod</td>
                                 <td>Barkod</td>
                                 <td>Açıklama</td>
                                 <td>Stok Miktarı</td>
