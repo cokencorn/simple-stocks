@@ -16,4 +16,9 @@ class Stock extends Model
     {
         return StockTransaction::where('stock_id', $this->id)->sum('amount');
     }
+
+    public function hasTransactions(): bool
+    {
+        return StockTransaction::where('stock_id', $this->id)->exists();
+    }
 }

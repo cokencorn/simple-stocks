@@ -46,7 +46,9 @@ class StockController extends Controller
 
     public function deleteStockAction(Stock $stock)
     {
-        $stock->delete();
+        if (!$stock->hasTransactions()) {
+            $stock->delete();
+        }
 
         return $this->stocksView();
     }
